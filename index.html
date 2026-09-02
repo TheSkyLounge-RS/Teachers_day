@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="A cinematic Teachers' Day tribute for Pranam Sir from five students.">
+<title>For Pranam Sir — Teachers' Day</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="ambient"></div><canvas id="particles"></canvas><div class="grain"></div>
+<header class="topbar"><div class="brand">FOR <span>PRANAM SIR</span></div><button id="soundBtn">🔇 SOUND OFF</button></header>
+<main>
+<section id="intro" class="scene active intro">
+  <div class="terminal"><div class="terminal-head"><i></i><i></i><i></i><b>teachers_day.exe</b></div><div id="terminalBody"></div></div>
+  <div id="introCopy" class="intro-copy hidden"><p class="kicker">A message from five students</p><h1>Some teachers teach<br><em>more than lessons.</em></h1><p>Somehow, along the way, they become part of our memories.</p><button id="startBtn" class="gold-btn">OPEN OUR SURPRISE <span>→</span></button></div>
+</section>
+
+<section id="sir" class="scene hero-scene">
+  <div class="hero-image"><img src="images/sir.jpg" alt="Pranam Sir"></div>
+  <div class="hero-copy"><p class="kicker">To the teacher behind so many memories</p><h2>PRANAM<br><em>SIR</em></h2><p class="hero-quote">“A good teacher gives you answers.<br>A great teacher teaches you how to find them.”</p><button class="outline-btn" data-next="memories">MEET YOUR FIVE STUDENTS <span>→</span></button></div>
+</section>
+
+<section id="memories" class="scene memories-scene">
+  <div class="section-title"><p class="kicker">Five students. Five personalities.</p><h2>Before the serious part…<br><em>you should meet us properly.</em></h2><p class="guide" id="memoryGuide">Sir, let's start with <b>Akash</b>. Click his photo.</p></div>
+  <div class="memory-grid">
+    <button class="memory-card" data-student="akash"><img src="images/akash.jpg" alt="Akash"><span class="number">01</span><div><small>THE HEALTH UPDATE</small><strong>AKASH</strong><p>“Sir ajke shorir kharap…”</p></div></button>
+    <button class="memory-card locked" data-student="anik"><img src="images/anik.jpg" alt="Anik"><span class="number">02</span><div><small>QUESTION MODE</small><strong>ANIK</strong><p>One question became… many.</p></div></button>
+    <button class="memory-card locked" data-student="rupsha"><img src="images/rupsha.jpg" alt="Rupsha"><span class="number">03</span><div><small>SERIOUS MODE</small><strong>RUPSHA</strong><p>Trying not to laugh.</p></div></button>
+    <button class="memory-card locked" data-student="upanjan"><img src="images/upanjan.jpg" alt="Upanjan"><span class="number">04</span><div><small>THE PROCESSOR</small><strong>UPANJAN</strong><p>Double meaning detected.</p></div></button>
+    <button class="memory-card locked" data-student="sneha"><img src="images/sneha.jpg" alt="Sneha"><span class="number">05</span><div><small>ATTENDANCE</small><strong>SNEHA</strong><p>“I was there… probably.”</p></div></button>
+  </div>
+</section>
+
+<section id="student" class="scene student-scene">
+  <div class="student-backdrop"><img id="studentBg" src="" alt=""></div><div class="student-overlay"></div>
+  <div class="student-panel"><button id="studentClose" class="back-btn">← BACK TO OUR MEMORIES</button><div class="student-photo"><img id="studentPhoto" src="" alt=""></div><div class="student-copy"><p class="kicker" id="studentKicker"></p><h2 id="studentName"></h2><h3 id="studentRole"></h3><div class="funny-box" id="funnyBox"></div><p id="studentDesc"></p><button id="studentContinue" class="gold-btn">NEXT MEMORY <span>→</span></button></div></div>
+</section>
+
+<section id="letters" class="scene letters-scene">
+ <div class="section-title"><p class="kicker">Now, the part we really mean.</p><h2>Some things are easier<br><em>to write than to say.</em></h2><p class="guide" id="letterGuide">Sir, please open <b>Akash's</b> letter first.</p></div>
+ <div class="letter-grid">
+  <button class="letter-card" data-letter="akash"><span>01</span><div class="envelope">✉</div><strong>AKASH</strong><small>OPEN LETTER</small></button>
+  <button class="letter-card locked" data-letter="anik"><span>02</span><div class="envelope">✉</div><strong>ANIK</strong><small>LOCKED</small></button>
+  <button class="letter-card locked" data-letter="rupsha"><span>03</span><div class="envelope">✉</div><strong>RUPSHA</strong><small>LOCKED</small></button>
+  <button class="letter-card locked" data-letter="upanjan"><span>04</span><div class="envelope">✉</div><strong>UPANJAN</strong><small>LOCKED</small></button>
+  <button class="letter-card locked" data-letter="sneha"><span>05</span><div class="envelope">✉</div><strong>SNEHA</strong><small>LOCKED</small></button>
+ </div>
+</section>
+
+<div id="letterModal" class="modal"><div class="modal-bg"></div><article class="letter-paper-wrap"><button id="closeLetter" class="close">×</button><div class="letter-heading"><img id="letterPhoto" src="" alt=""><div><p class="kicker">A few words from</p><h2 id="letterName"></h2></div></div><div class="paper"><p id="letterText"></p><div class="signature">— With love and respect ❤️</div></div><button id="letterContinue" class="gold-btn">NEXT LETTER <span>→</span></button></article></div>
+
+<section id="scrapbook" class="scene scrapbook-scene">
+ <div class="section-title"><p class="kicker">The little things we will remember</p><h2>Not every memory<br><em>needs a photograph.</em></h2></div>
+ <div class="scrap-grid"><div class="note tilt-left">“Sir, ekta question chilo…”<b>— Anik, probably</b></div><div class="note tilt-right">“Sir ajke shorir kharap, aste parbo na.”<b>— Akash</b></div><div class="note tilt-left">Serious face.<br>2 seconds later… 😂<b>— Rupsha</b></div><div class="note tilt-right">Double meaning found.<br>Laugh activated. 😂<b>— Upanjan</b></div><div class="note center-note">Attendance system searching…<br><strong>SNEHA NOT FOUND 👻</strong></div></div>
+ <p class="scrap-final">And somehow, Sir… <em>you handled all five of us.</em></p><button class="outline-btn" id="toFinal">THERE'S ONE LAST THING <span>→</span></button>
+</section>
+
+<section id="final" class="scene final-scene">
+ <div class="final-portraits"><div><img src="images/akash.jpg"><span>Akash</span></div><div><img src="images/anik.jpg"><span>Anik</span></div><div><img src="images/rupsha.jpg"><span>Rupsha</span></div><div class="sir"><img src="images/sir.jpg"><span>Pranam Sir</span></div><div><img src="images/upanjan.jpg"><span>Upanjan</span></div><div><img src="images/sneha.jpg"><span>Sneha</span></div></div>
+ <div class="final-copy"><p class="fade">Five students.</p><p class="fade">Five completely different personalities.</p><p class="fade">One teacher who somehow made every class memorable.</p><h2>Countless<br><em>memories.</em></h2><p class="thank">You taught us Data Structures &amp; Algorithms.<br><em>But more importantly, you taught us how to think.</em></p><h1>HAPPY TEACHERS' DAY<br><span>PRANAM SIR ❤️</span></h1><div id="punchline" class="punchline">“Tumi Vbab Bondho Koro Age.”</div><button id="replay" class="replay">↻ EXPERIENCE AGAIN</button></div>
+</section>
+</main><div id="toast"></div><script src="script.js"></script>
+</body></html>
